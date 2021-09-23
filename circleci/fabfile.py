@@ -106,7 +106,7 @@ def integ_test(
         )
         # Clean some space
         run(
-            "docker system prune -f"
+            "docker system prune -f",
         )
         if should_test:
             if env.stack == LTE_STACK:

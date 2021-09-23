@@ -18,7 +18,7 @@ aliases:
           - master
           - develop
   - &lte_build_verify
-    paths: "orc8r lte"
+    paths: "orc8r lte circleci/fabfile.py"
   - &c_cpp_build_verify
     paths: "orc8r/gateway/c orc8r/protos lte/gateway/c lte/protos feg/protos orc8r/protos lte/gateway/Makefile"
   - &session_manager_build_verify
@@ -359,8 +359,6 @@ commands:
         type: string
     steps:
       - checkout
-      - build/determinator:
-          <<: *lte_build_verify
       - run: echo 'export MAGMA_ROOT=$(pwd)' >> $BASH_ENV
       - run:
           name: Install tools
@@ -1082,8 +1080,6 @@ jobs:
     machine:
       image: ubuntu-1604:201903-01
     steps:
-      - build/determinator:
-          <<: *lte_build_verify
       - magma_integ_test:
           stack: lte
           test: 'True'
