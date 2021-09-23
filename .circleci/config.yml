@@ -1455,8 +1455,7 @@ workflows:
           <<: *only_master
       - mme-clang-warnings:
           <<: *only_master
-      - lte-integ-test:
-          <<: *master_and_develop
+      - lte-integ-test
       - lte-agw-deploy:
           <<: *only_master
           requires:
