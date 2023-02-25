@@ -30,7 +30,7 @@ require (
 	go.uber.org/atomic v1.7.0
 	go.uber.org/zap v1.18.1
 	golang.org/x/net v0.0.0-20200202094626-16171245cfb2
-	golang.org/x/sys v0.0.0-20191002091554-b397fe3ad8ed // indirect
+	golang.org/x/sys v0.1.0 // indirect
 	google.golang.org/grpc v1.33.2
 	google.golang.org/protobuf v1.26.0
 	magma/orc8r/lib/go v0.0.0
